@@ -3,8 +3,12 @@ var app = require('express')();
 var http = require('http').Server(app);
 
 // we define a route handler / that get called when we hit our website home.
+// app.get('/', function(request, response){
+//   resonse.sendFile('<h1>hello world</h1>');
+// });
+
 app.get('/', function(request, response){
-  resonse.sendFile('<h1>hello world</h1>');
+  response.sendFile(__dirname + '/index.html');
 });
 
 http.listen(3000, function(){
